@@ -19,8 +19,8 @@ spec:
     - host: {{ .Values.coder.ingress.host | quote }}
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /coder
+            pathType: Exact
             backend:
               service:
                 name: coder
@@ -31,8 +31,8 @@ spec:
     - host: {{ include "coder.ingressWildcardHost" . | quote }}
       http:
         paths:
-          - path: /
-            pathType: Prefix
+          - path: /coder
+            pathType: Exact
             backend:
               service:
                 name: coder
