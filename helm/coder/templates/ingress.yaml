@@ -20,7 +20,7 @@ spec:
       http:
         paths:
           - path: /coder
-            pathType: Prefix
+            pathType: Exact
             backend:
               service:
                 name: coder
@@ -32,7 +32,7 @@ spec:
       http:
         paths:
           - path: /coder
-            pathType: Prefix
+            pathType: Exact
             backend:
               service:
                 name: coder
